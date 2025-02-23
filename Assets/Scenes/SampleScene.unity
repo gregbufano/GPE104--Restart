@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 339251721}
   - component: {fileID: 339251724}
   - component: {fileID: 339251725}
+  - component: {fileID: 339251726}
   m_Layer: 0
   m_Name: starShip
   m_TagString: Untagged
@@ -398,6 +399,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 0
+--- !u!114 &339251726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339251720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cf36db3dec3ed45b004c670ab02f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TeleportLeft: 276
+  TeleportRight: 275
+  TeleportUp: 273
+  TeleportDown: 274
+  RandomTeleport: 116
+  xMin: -5
+  xMax: 5
+  yMin: -5
+  yMax: 5
+  teleportDistance: 1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
