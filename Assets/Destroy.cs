@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestGm : MonoBehaviour
+public class Destroy : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -11,6 +11,10 @@ public class TestGm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // GameManager.instance.PrintHello();
+        
+    }
+    public void Destroyed()
+    {
+        Destroy(gameObject);
     }
 }

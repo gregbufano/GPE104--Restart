@@ -37,6 +37,7 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             // Die
+            print("Triggering Death");
             deathComponent.Die();
         }
     }

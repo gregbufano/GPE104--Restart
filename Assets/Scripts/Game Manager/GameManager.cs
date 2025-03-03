@@ -4,9 +4,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public int lives = 3;
+
     public void Awake()
     {
-        instance = this;
+       
+        
 
       
     }

@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Death : MonoBehaviour
+public class Death : MonoBehaviour
 {
+    
+   
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -18,6 +20,7 @@ public abstract class Death : MonoBehaviour
 
     public virtual void Die()
     {
+        print("GameObject Destroyed");
         Destroy(gameObject);
     }
 }
