@@ -13,6 +13,7 @@ public class Controller : MonoBehaviour
     public KeyCode moveDown;
     public KeyCode moveLeft;
     public KeyCode moveRight;
+    public KeyCode Shoot;
 
     // This will store the value Shift
     public KeyCode incrementalMovementEnable;
@@ -93,6 +94,7 @@ public class Controller : MonoBehaviour
                 // Move right increment
                 mover.MoveRight(1);
             }*/
+            
         }
     }
 

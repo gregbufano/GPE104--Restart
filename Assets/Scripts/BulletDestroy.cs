@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BulletDestroy : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider2D)
     {
         // Destroys other object
-        Destroy(collision.gameObject);
+        Destroy(collider2D.gameObject);
         // Destroys itself
         Destroy(gameObject);
     }
