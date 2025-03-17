@@ -3,6 +3,7 @@ using UnityEngine;
 public class CrashDMG : MonoBehaviour
 {
    public float Damage = 5;
+   public int ScoreIncreaseAmount;
 
    private void OnTriggerEnter2D(Collider2D collider2D){
     if (collider2D.gameObject.TryGetComponent<Health>(out Health component))
@@ -13,6 +14,8 @@ public class CrashDMG : MonoBehaviour
    }
    void OnDestroy()
    {
-        FindObjectOfType<GameManager>().EnemyDestroyed();
+        FindObjectOfType<GameManager>().ReduceAsteroidCountByOne();
+        GameManager.instance.IncreaseScore(ScoreIncreaseAmount);
+        
    }
 }

@@ -51,6 +51,10 @@ public class Pawn : MonoBehaviour
         }
        
     }
+    public void Crash()
+    {
+         FindObjectOfType<GameManager>().ReduceLiveByOne();
+    }
     
     
 }

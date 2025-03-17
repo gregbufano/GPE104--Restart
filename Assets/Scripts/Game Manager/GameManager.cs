@@ -3,11 +3,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public string enemyTag = "Asteroid";
-    private int totalEnemies; // Total number of Asteroids
-    private int enemiesDestroyed = 0; // Number of destroyed enemies
+
+    public UIManager uiManager;
+    
 
     public int lives = 3;
+    public int asteroidCount = 2;
+
+    public int score = 0;
     
    
     public void Awake()
@@ -28,20 +31,38 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
  void start()
 {
-    totalEnemies = GameObject.FindGameObjectsWithTag(enemyTag).Length;
+ 
 }
-public void EnemyDestroyed()
+public void ReduceLiveByOne()
 {
-    enemiesDestroyed++;
-
-    if (enemiesDestroyed >= totalEnemies)
-    {
-        TriggerWin();
-    }
+  lives--;
+  if (lives <= 0)
+  {
+    TriggerLoss();
+  }
 }
+public void ReduceAsteroidCountByOne()
+{
+  asteroidCount--;
+  if (asteroidCount<= 0)
+  {
+    TriggerWin();
+  }
+}
+
+public void IncreaseScore(int amount)
+{
+score += amount;
+uiManager.UpdateText("" + score);
+}
+
 void TriggerWin()
 {
     Debug.Log("You Win");
+}
+void TriggerLoss()
+{
+  Debug.Log("You Lose");
 }
 
     // Update is called once per frame

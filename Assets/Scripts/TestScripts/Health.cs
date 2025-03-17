@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     public float currentHealth;
     public float maxHealth;
 
+    public UpdateAsteroidHealthbar healthBarFiller;
     public Death deathComponent;
 
     // Start is called before the first frame update
@@ -26,6 +27,11 @@ public class Health : MonoBehaviour
         currentHealth = currentHealth + amount;
 
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        if (healthBarFiller != null)
+        {
+            healthBarFiller.ChangeFillAmount();
+        }
     }
 
     public void TakeDamage(float amount)
@@ -33,6 +39,11 @@ public class Health : MonoBehaviour
         currentHealth = currentHealth - amount;
 
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        if (healthBarFiller != null)
+        {
+            healthBarFiller.ChangeFillAmount();
+        }
 
         if (currentHealth <= 0)
         {
