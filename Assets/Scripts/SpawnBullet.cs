@@ -6,11 +6,13 @@ public class SpawnBullet : MonoBehaviour
     public GameObject Bullet; // Bullet prefab
     public Transform firePoint; // Custom spawn position
     public float bulletForce = 5f; // Bullet speed
+    public AudioSource shootAudioSource;
 
     void Update()
     {
         if (Input.GetKeyDown(Shoot))
         {
+            shootAudioSource.Play();
             ShootBullet();
         }
     }

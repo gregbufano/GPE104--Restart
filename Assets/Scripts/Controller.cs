@@ -24,6 +24,8 @@ public class Controller : MonoBehaviour
 
     public KeyCode disableSpriteGameObject;
 
+    public AudioSource shootAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {

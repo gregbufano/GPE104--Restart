@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
+    public AudioSource blowUpAudioSource;
     
    
     // Start is called before the first frame update
@@ -20,7 +21,9 @@ public class Death : MonoBehaviour
 
     public virtual void Die()
     {
+        blowUpAudioSource.Play();
         print("GameObject Destroyed");
+        
         Destroy(gameObject);
     }
 }
