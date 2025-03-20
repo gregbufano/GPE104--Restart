@@ -5,11 +5,15 @@ using UnityEngine;
 public class BulletDestroy : MonoBehaviour
 
 {
-    private void OnTriggerEnter2D(Collider2D collider2D)
+    public float Damage = 10;
+    private void OnTriggerEnter2D(Collider2D collider2D){
+
+    
+    if (collider2D.gameObject.TryGetComponent<Health>(out Health component))
     {
-        // Destroys other object
-        Destroy(collider2D.gameObject);
-        // Destroys itself
+        component.TakeDamage(Damage);
         Destroy(gameObject);
+    }
+   
     }
 }

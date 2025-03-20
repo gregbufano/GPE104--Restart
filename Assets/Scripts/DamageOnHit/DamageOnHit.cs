@@ -24,7 +24,7 @@ public class DamageOnHit : MonoBehaviour
         {
             starshipHealth.TakeDamage(damageToInflict);
 
-            Destroy(gameObject);
+            
         }
         
     }

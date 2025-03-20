@@ -9,7 +9,7 @@ public class CrashDMG : MonoBehaviour
     if (collider2D.gameObject.TryGetComponent<Health>(out Health component))
     {
         component.TakeDamage(Damage);
-        Destroy(gameObject);
+        
     }
    }
    void OnDestroy()
