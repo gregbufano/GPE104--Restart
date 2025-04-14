@@ -5,6 +5,11 @@ public class CrashDMG : MonoBehaviour
    public float Damage = 5;
    public int ScoreIncreaseAmount;
 
+   void Start()
+   {
+    FindObjectOfType<GameManager>().IncreaseAsteroidCountByOne();
+   }
+
    private void OnTriggerEnter2D(Collider2D collider2D){
     if (collider2D.gameObject.TryGetComponent<Health>(out Health component))
     {

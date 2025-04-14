@@ -5,6 +5,11 @@ public class StarshipHealth : MonoBehaviour
 
     public float currentHealth;
     public float maxHealth;
+    public int lives;
+    public Transform starShip;
+    public Transform PlayerRespawn;
+    
+    
 
     public UpdateHealthbar healthBarFiller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -55,5 +60,10 @@ public class StarshipHealth : MonoBehaviour
             GameManager.instance.ReduceLiveByOne();
         }
         Destroy(gameObject);
+        
+        
+
+        
+       
     }
 }

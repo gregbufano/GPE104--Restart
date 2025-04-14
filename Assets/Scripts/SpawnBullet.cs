@@ -7,6 +7,7 @@ public class SpawnBullet : MonoBehaviour
     public Transform firePoint; // Custom spawn position
     public float bulletForce = 5f; // Bullet speed
     public AudioSource shootAudioSource;
+    
 
     void Update()
     {

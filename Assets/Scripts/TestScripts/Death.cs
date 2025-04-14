@@ -5,6 +5,7 @@ using UnityEngine;
 public class Death : MonoBehaviour
 {
     public AudioSource blowUpAudioSource;
+    public GameObject prefabToSpawn;
     
    
     // Start is called before the first frame update
@@ -25,5 +26,7 @@ public class Death : MonoBehaviour
         print("GameObject Destroyed");
         
         Destroy(gameObject);
+        Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
+
     }
 }

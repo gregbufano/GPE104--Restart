@@ -8,6 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Volume scene.unity
+    guid: 93aea8f4ff63a9d478e0c0153a22f4e5
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 3e7287d441255814cac586bf9090e0bd
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 3cf4c9325ac5c654fbceb7f334fe388b
+  - enabled: 1
+    path: Assets/Scenes/You Lose.unity
+    guid: 12de80b9fca6bcb49bfab7dc8b8dfb33
+  - enabled: 1
+    path: Assets/Scenes/You Win.unity
+    guid: e4d3c8ab14e8b38409fe58e22f02fff9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
